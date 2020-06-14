@@ -2,10 +2,10 @@ const { AffineCipher } = require('./lib');
 
 const affineCipher = new AffineCipher(3, 4);
 
-const word = 'hello';
+const word = 'privatekey';
 
-const decryptedWord = affineCipher.decryptWord(word);
-const encryptedWord = affineCipher.encryptWord(decryptedWord);
+const encryptedWord = affineCipher.encryptWord(word);
+const decryptedWord = affineCipher.decryptWord(encryptedWord);
 
-console.log(`Decrypted word: ${decryptedWord}`);
 console.log(`Encrypted word: ${encryptedWord}`);
+console.log(`Decrypted word: ${decryptedWord}`);
